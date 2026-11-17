@@ -6,3 +6,5 @@ use App\Http\Controllers\Api\DrinkController;
 
 // Italok
 Route::get('/drinks', [DrinkController::class, 'getDrinks']);
+Route::get('/drinks/{drink}', [DrinkController::class, 'getDrink']);
+Route::post('drinks', [DrinkController::class, 'createDrink']);

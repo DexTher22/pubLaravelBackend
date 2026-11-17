@@ -15,5 +15,11 @@ class ListDrinkService {
 
         return DrinkResource::collection($drinks);
     
-    }    
+    }
+
+    public function getDrink(Drink $drink) {
+        
+        $rawData = $drink->load('type', 'package');
+        return (new DrinkResource($rawData));
+    }
 }
